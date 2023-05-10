@@ -11,8 +11,8 @@ def allProCat(request, c_slug=None,):
         c_page = get_object_or_404(Category,slug=c_slug)
         products_list  = Product.objects.all().filter(category=c_page, available=True)
     else:
-        products_list =Product.objects.all()
-    paginator = Paginator(products_list,6)
+        products_list =Product.objects.all().filter(available=True)
+    paginator = Paginator(products_list,4)
     try:
             page = int(request.GET.get('page','1'))
     except:

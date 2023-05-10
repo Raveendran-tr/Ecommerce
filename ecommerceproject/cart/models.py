@@ -9,7 +9,7 @@ class Cart(models.Model):
         db_table='Cart'
         ordering=['date_added']
     def __str__(self):
-        return '{}' .format(self.cart_id)
+        return self.cart_id
 class CartItem(models.Model):
     product=models.ForeignKey(Product,on_delete=models.CASCADE)
     cart=models.ForeignKey(Cart,on_delete=models.CASCADE)
@@ -18,6 +18,6 @@ class CartItem(models.Model):
     class Meta:
         db_table='CartItem'
     def sub_total(self):
-        return self.product.price * self.quantity
+        return str(self.product.price * self.quantity)
     def __str__(self):
-        return '{}' .format(self.product)
+        return str(self.product)

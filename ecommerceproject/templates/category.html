@@ -28,7 +28,7 @@
 {% endif %}
 <div class="mx_auto"><center>
     {% if category %}
-        <img class="my_image"src="{{category.image.url}}" alt="{{category.name}}" style="width:800px"></center>
+        <img class="my_image"src="{{category.image.url}}" alt="{{category.name}}" style="width:100px"></center>
 </div>
 <br>
 <div>
@@ -37,7 +37,7 @@
 </div>
     {% else %}
 <div><center>
-    <img class="my_image my_image_padding" src="{% static 'img/banners.jpg' %}" alt="our products" style="width:800px"></center>
+    <img class="my_image my_image_padding" src="{% static 'img/banners.jpg' %}" alt="our products" style="width:1500px"></center>
 </div><br>
 <div>
     <h1 class="text-center my_title">Our Product Collections</h1>
@@ -48,9 +48,9 @@
     <div class="row mx-auto">
         {% for product in products.object_list %}
             <div class="my_bottom_margin col-8 col-sm-8 col-md-3 col-lg-3">
-                <div class="card text-center h-100" style="min-width:15rem;">
+                <div class="card text-center h-100" style="min-width:5rem;">
                     <a href="{{product.get_url}}">
-                        <img class="card-img-top my_image" src="{{product.image.url}} " alt="{{product.name}}"height="1500px";width="1500px";></a>
+                        <img class="card-img-top my_image" src="{{product.image.url}} " alt="{{product.name}}"style="height:200px"></a>
                         <div class="card-body">
                 <h4>{{product.name}}</h4>
                 <p>{{product.price}}</p>

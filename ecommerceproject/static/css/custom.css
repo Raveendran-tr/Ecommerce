@@ -12,6 +12,7 @@ text-transform:uppercase;
 .body{
 
     font-family: 'Merriweather' , serif;
+    min-height:100vh;
 }
 .my_footer p{
     padding-top:20px;
@@ -94,17 +95,11 @@ text-decoration:none;
 }
 .custom_icon{
 text-decoration:none;
-color:#868e96 !important
+color:#868e96 !important;
 }
 .my_custom_button{
 margin-top:5px;
 }
 
 
-
-
-
-
-
-
-
+.html{height:100%;}
